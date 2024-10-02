@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanjiku Faith Portfolio</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./pic/logo.PNG" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./js/bootstrap.min.js">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  
+  <section class="body">
+    <!-- Video for light mode -->
+    <video autoplay muted loop id="light-mode-video">
+      <source src="./pic/6913997_Motion Graphics_Motion Graphic_3840x2160.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Video for dark mode -->
+    <video autoplay muted loop id="dark-mode-video" style="display:none;">
+      <source src="./pic/4954759_Coll_halloween_Dusty_6144x3456.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- <button onclick="playMusic()">Play Music</button> -->
+    <audio id="background-music" src="./pic/please-calm-my-mind-125566.mp3" preload="auto"></audio>
+
+    <header class="my-5">
+      <div class="container-fluid">
+        <div class="container t">
+          <div class="row">
+            <div class="col-md-6">
+              <div id="greeting" class="greeting-message"></div>
+
+            </div>
+            <!-- <div class="col-md-6 toggle-container text-end">
+            <button id="theme-toggle" class="theme-toggle btn btn-light">
+              <svg width="30" height="30" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="15" fill="black" />
+                <circle cx="35" cy="25" r="10" fill="white" />
+              </svg>
+            </button>
+          </div> -->
+            <div class="col-md-6 toggle-container text-end">
+              <button id="theme-toggle" class="theme-toggle btn btn-light">
+                <!-- Moon icon for dark mode -->
+                <svg id="moon-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 0010.46 9.79z"></path>
+                </svg>
+
+                <!-- Sun icon for light mode (hidden initially) -->
+                <svg id="sun-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="container occu">
+          <div class="row align-items-center mt-5">
+
+            <div class="col-md-12 ">
+
+              <div class="occuppation">
+                <h1>I'M WANJIKU FAITH</h1>
+                <h5>Front_End Developer</h5>
+              </div>
+              <div class="text">
+                <!-- <div class="typewriter"> -->
+                <h1 class="display-4">A Warm <span>Welcome</span> to My Artistry</h1>
+
+                <!-- </div> -->
+                <p class="lead">Collaborate to Create Something Stunning</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="navbarNav mt-3">
+                <a class="btn btn-primary active" aria-current="page" href="index.html">
+                  <i class="bi bi-house-door" style="margin-right: 5px;"></i> Home
+                </a>
+                <a class="btn btn-primary" href="about.html">
+                  <i class="bi bi-person" style="margin-right: 5px;"></i> About
+                </a>
+                <a class="btn btn-primary" href="#projects">
+                  <i class="bi bi-briefcase" style="margin-right: 6px;"></i> Projects
+                </a>
+              </div>
+            </div>
+            
+
+
+              <div class="mt-3">
+                <a href="https://www.linkedin.com/in/wanjiku-faith-637094272/" class="btn btn-primary"><i
+                    class="bi bi-linkedin" style="margin-right: 10px;"></i> LinkedIn</a>
+                <a href="https://github.com/wanjiku8" class="btn btn-primary"><i class="bi bi-github"
+                    style="margin-right: 10px;"></i> Github</a>
+                <a href="https://docs.google.com/document/d/1LcrjXaANdD1UkfipKTPCx5c3PBWSTguQ/edit?usp=sharing&ouid=102693493539831344650&rtpof=true&sd=true"
+                  class="btn btn-primary"><i class="bi bi-file-earmark-text" style="margin-right: 10px;"></i> CV</a>
+                <a href="mailto:wanjikuf141@gmail.com" class="btn btn-primary">
+                  <i class="bi bi-envelope" style="margin-right: 10px;"></i> Email Me
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+
+
+
+  <div class="container mb-1">
+    <div class="col-md-6 " style="height: 20px;">
+
+    </div>
+
+  </div>
+
+  <style>
+    #projects .col-md-6 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      text-align: right;
+      margin: 10px 0;
+      color: #333;
+      font-size: 18px;
+      width: 100%;
+    }
+
+    .custom-card {
+      position: relative;
+      right: 25px;
+      width: 600px !important;
+      background: #1a0a00 !important;
+      border: 6px solid white;
+      padding: 30px !important;
+      border-radius: 0px;
+
+    }
+
+    /* .custom-card.right {
+            position: relative;
+            right: 10px;
+            width: 640px;
+        }
+         */
+
+    /* .image-container {
+      max-width: 100%;
+      height: 330px;
+      overflow: hidden;
+      position: relative;
+    } */
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      cursor: pointer;
+    }
+
+    .image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.253);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .custom-card {
+      position: relative;
+      z-index: 2;
+      /* background-color: #000000fe; */
+      color: white;
+      padding: 20px;
+      width: 100%;
+    }
+
+
+
+    .image-container::-webkit-scrollbar {
+      display: none !important;
+    }
+
+    .image-container {
+      -ms-overflow-style: none !important;
+      scrollbar-width: none !important;
+    }
+
+    @media (max-width: 767px) {
+
+      .custom-card.left,
+      .custom-card.right {
+        width: 100%;
+        right: 0;
+        left: 0;
+        padding: 15px;
+      }
+
+      .custom-card h5,
+      .custom-card p,
+      .custom-card a {
+        text-align: center;
+      }
+
+      .image-container {
+        height: 300px;
+      }
+
+      .image-container img {
+        object-fit: contain;
+      }
+
+      .row {
+        display: block;
+        text-align: center;
+      }
+
+      .col-md-6 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card-title {
+        text-align: center;
+        /* margin: 10px 0; */
+        color: #333;
+        font-size: 18px;
+        width: 100%;
+      }
+
+      .custom-card {
+
+        background-color: #1a0a00;
+        color: white;
+        padding: 50px 50px !important;
+        width: 100%;
+
+      }
+    }
+  </style>
+  <style>
+    .image-container {
+      overflow: hidden;
+      height: 330px;
+      position: relative;
+      border-radius: 3px;
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+
+    .row {
+      display: flex;
+      /* margin-bottom: 20px; */
+    }
+
+
+    .scrolling {
+      animation: scroll 10s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    #projects h2 {
+      color: black;
+      margin-bottom: 20px;
+
+    }
+
+    .projects-two h2 {
+      color: black;
+      margin-bottom: 20px;
+    }
+  </style>
+
+
+
+  <section class="container" id="projects">
+    <h2>Projects</h2>
+
+
+    <div class="row mb-5" style="background: rgb(219, 219, 219); padding: 40px;">
+      <div class="col-md-6">
+        <div class="image-container" onmouseover="startScroll(this)" onmouseout="stopScroll(this)">
+          <img src="./pic/REPEAT-ROAD-HOMEPAGE.jpg" alt="Project 1">
+        </div>
+      </div>
+      <div class="col-md-6 align-items-center">
+        <h5 class="card-title " style="color:#1a0a00 !important; font-weight:200;">Featured Project</h5>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:700; font-size: 1.4rem;">ROAD (Royal Aid
+          Development)</h5>
+        <div class="custom-card left">
+
+          <p class="card-text">The site highlights their commitment to helping communities grow and provides easy access to information about their programs and initiatives. I focused on creating a responsive, user-friendly design from scratch, ensuring smooth navigation on all devices. The site was built with a strong focus on UI/UX, making it interactive and engaging for users.</p>
+          <a href="https://acesolutionafrica.net/projects/Road" class="btn btn-primary">View Project</a>
+        </div>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:400; font-size: 0.8rem;">PHP | Wordpress
+        </h5>
+
+
+      </div>
+    </div>
+
+
+    <div class="row mb-5 " style="background: rgb(219, 219, 219); padding: 40px;">
+      <div class="col-md-6">
+        <div class="image-container" onmouseover="startScroll(this)" onmouseout="stopScroll(this)">
+          <img src="./pic/screencapture-acesolutionafrica-net-projects-abpc-new-2024-07-24-15_57_12.png"
+            alt="Project 2">
+        </div>
+      </div>
+      <div class="col-md-6 align-items-center">
+        <h5 class="card-title" style="color:#1a0a00 !important; font-weight:200;">Featured Project</h5>
+        <h5 class="card-title " style="color:#5d503f !important; font-weight:700; font-size: 1.4rem;">Afro Beauty
+          Plastic Surgery Website</h5>
+
+        <div class="custom-card right">
+          <p class="card-text"> I created a stylish and elegant website that reflects the brand’s focus on enhancing natural beauty. The site features an easy-to-use design, informative content, and a responsive layout, giving clients a clear understanding of the services offered. This project highlights the balance between a professional look and functional design.
+          </p>
+          <a href="https://acesolutionafrica.net/projects/abpc_new/" class="btn btn-primary">View Project</a>
+        </div>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:400; font-size: 0.8rem;">PHP | Wordpress
+        </h5>
+      </div>
+    </div>
+
+
+    <div class="row mb-5" style="background: rgb(219, 219, 219); padding: 40px;">
+      <div class="col-md-6">
+        <div class="image-container" onmouseover="startScroll(this)" onmouseout="stopScroll(this)">
+          <img src="./pic/agpro (2).png" alt="Project 3">
+        </div>
+      </div>
+      <div class="col-md-6 align-items-center">
+        <h5 class="card-title" style="color:#1a0a00 !important; font-weight:200;"> Featured Project</h5>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:700; font-size: 1.4rem;">AGPRO KE Website
+        </h5>
+
+        <div class="custom-card left">
+          <p class="card-text">I developed a website that acts as a central hub for agricultural professionals and enthusiasts. The site has a clean, modern design with easy-to-navigate sections that showcase AGPRO KE’s services and resources. My role included adding interactive features and ensuring the site is optimized for both desktop and mobile users.</p>
+          <a href="https://acesolutionafrica.net/projects/agpro/" class="btn btn-primary">View Project</a>
+        </div>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:400; font-size: 0.8rem;">PHP | Wordpress
+        </h5>
+      </div>
+    </div>
+
+
+
+
+    <div class="row mb-5" style="background: rgb(219, 219, 219); padding: 40px;">
+      <div class="col-md-6">
+        <div class="image-container" onmouseover="startScroll(this)" onmouseout="stopScroll(this)">
+          <img src="./pic/Ecospot.png" alt="Project 3">
+        </div>
+      </div>
+      <div class="col-md-6 align-items-center">
+        <h5 class="card-title" style="color:#1a0a00!important; font-weight:200;"> Featured Project</h5>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:700; font-size: 1.4rem;">ECOSPOT CHEMICALS
+          LTD Website
+        </h5>
+
+        <div class="custom-card left">
+          <p class="card-text"> The site has a clean, modern design with easy-to-navigate sections that showcase a wide range of chemical lab reagents and equipment. My role included adding interactive features to enhance the user experience and ensuring the site is optimized for both desktop and mobile users. The e-commerce functionality makes it easy for customers to find and purchase essential chemical products online.</p>
+          <a href="https://acesolutionafrica.net/projects/agpro/" class="btn btn-primary">View Project</a>
+        </div>
+        <h5 class="card-title" style="color:#5d503f !important; font-weight:400; font-size: 0.8rem;">PHP | Wordpress
+        </h5>
+      </div>
+    </div>
+
+
+
+    <div class="text-center my-5">
+      <a href="tel:0112580259" class="btn btn-primary">
+        <strong>Contact Me</strong>
+      </a>
+    </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <section class="projects-two my-5">
+    <div class="container">
+      <h2>Other Projects</h2>
+      <div class="row">
+        <!-- Project 1: Password Generator -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/Password-generator.png" alt="Password Generator" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A simple password generator that helps you create strong and secure passwords
+                  easily.</p>
+                <a href="https://wanjiku8.github.io/Password-Generator/" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Notes App -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/Notes-.....png" alt="Notes App" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A notes-taking app that allows you to create, edit, and save notes for easy
+                  access.</p>
+                <a href="https://wanjiku8.github.io/Notes/" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Traffic Signal Lights -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/SIIGNAL-LIGHTS.png" alt="Traffic Signal Lights" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A fun project that simulates how traffic signal lights work.</p>
+                <a href="https://wanjiku8.github.io/JS-Project-Traffic-lights/" class="btn btn-primary">View Project</a>
+                <span class="language">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Quiz Web App -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/Quiz-web-app.png" alt="Quiz Web App" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A web app that allows users to take quizzes and check their scores.</p>
+                <a href="#" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: To-Do List App -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/To-Do-list.png" alt="To-Do List" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">An easy-to-use to-do list app to keep track of your tasks and mark them as
+                  completed.</p>
+                <a href="https://wanjiku8.github.io/To-Do-List/" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: WhatsApp Clone -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/Whatsapp-Clone.png" alt="WhatsApp Clone" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A clone of WhatsApp to mimic its messaging functionalities.</p>
+                <a href="https://wanjiku8.github.io/WhatsApp-Clone/" class="btn btn-primary">View Project</a>
+                <span class="language">React, Firebase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Simple Game -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/Game.png" alt="Simple Game" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A basic interactive game for fun and learning purposes.</p>
+                <a href="#" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: Tabs UI -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/tabs.png" alt="Tabs UI" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A simple project showcasing a tabs interface for content navigation.</p>
+                <a href="https://wanjiku8.github.io/Tabs/" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: Journal -->
+        <div class="col-md-4 mb-4">
+          <div class="image-box">
+            <img src="./pic/Notes.png" alt="Journal" class="img-fluid">
+            <div class="overlay">
+              <div class="text">
+                <p class="description">A simple project showcasing a journal interface for note-taking.</p>
+                <a href="https://wanjiku8.github.io/Journal/" class="btn btn-primary">View Project</a>
+                <span class="language">HTML, CSS, JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="container-fluid text-center mb-5 footer-light">
+    <p>© 2024 Made with love by Daisy. Thank you for visiting! Goodbye!</p>
+  </footer>
+
+
+  <script>
+    // Function to play the audio on page load
+    window.onload = function() {
+        const audio = document.getElementById('background-music');
+        audio.play().catch((error) => {
+            console.log("Audio playback prevented. Please allow audio to play on this site.");
+        });
+    };
+</script>
+  
+  <script>
+    function startScroll(element) {
+      // Start scrolling effect on hover
+      const img = element.querySelector('img');
+      img.classList.add('scrolling');
+    }
+
+    function stopScroll(element) {
+      // Stop scrolling effect when hover ends
+      const img = element.querySelector('img');
+      img.classList.remove('scrolling');
+    }
+  </script>
+
+
+  <script>
+    const lightModeVideo = document.getElementById('light-mode-video');
+    const darkModeVideo = document.getElementById('dark-mode-video');
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const moonIcon = document.getElementById('moon-icon');
+    const sunIcon = document.getElementById('sun-icon');
+
+    // Function to toggle between light and dark mode
+    function toggleTheme() {
+      // Check if light mode is active
+      if (lightModeVideo.style.display === 'none') {
+        // Switch to light mode
+        lightModeVideo.style.display = 'block';
+        darkModeVideo.style.display = 'none';
+
+        // Show the moon icon and hide the sun icon
+        moonIcon.style.display = 'block';
+        sunIcon.style.display = 'none';
+      } else {
+        // Switch to dark mode
+        lightModeVideo.style.display = 'none';
+        darkModeVideo.style.display = 'block';
+
+        // Show the sun icon and hide the moon icon
+        moonIcon.style.display = 'none';
+        sunIcon.style.display = 'block';
+      }
+    }
+
+    // Add event listener to the toggle button
+    themeToggleButton.addEventListener('click', toggleTheme);
+
+  </script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var today = new Date();
+    var hour = today.getHours();
+    var greeting;
+
+    if (hour >= 5 && hour < 12) {
+    greeting = 'Good morning! ☀️ Ready to seize the day?';
+} else if (hour >= 12 && hour < 18) {
+    greeting = 'Good afternoon! ☀️ Keep up the great work! 👏';
+} else if (hour >= 18 && hour < 22) {
+    greeting = 'Good evening! 🌙 Time to relax and unwind.';
+} else {
+    greeting = 'Good night! 🌜 Rest well for another productive day.';
+}
+
+
+    // Check if the element exists before trying to set its text
+    const greetingElement = document.getElementById('greeting');
+    if (greetingElement) {
+        greetingElement.textContent = greeting;
+    } else {
+        console.error("Element with ID 'greeting' not found.");
+    }
+});
+
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

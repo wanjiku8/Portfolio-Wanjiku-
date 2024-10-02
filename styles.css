@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.greeting-message {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1a0a00;
+  /* text-align: center; */
+  margin: 20px 0px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none !important;
+}
+
+/* .theme-toggle img {
+  width: 40px;
+  height: auto;
+} */
+
+.dark-mode {
+  /* background-color: #000000; */
+  color: #fff !important;
+  /* #a8927d */
+}
+
+.occu {
+  position: relative;
+  /* top: 40px; */
+
+}
+
+
+.navbar-nav {
+  list-style-type: none;
+
+}
+
+
+.navbarNav .btn {
+  text-decoration: none;
+  color: #000000;
+  background: #ffffff;
+  padding: 5px 30px;
+  outline: none !important;
+}
+
+.navbarNav .active {
+  font-weight: bold;
+  background: #000000 !important;
+  border: 1px solid #5d503f !important;
+}
+
+
+.btn.btn-primary {
+  color: #000000;
+  background-color: #ffffff;
+  border-color: #5d503f;
+}
+
+
+.btn.btn-primary:hover {
+  background-color: #23272b;
+  border: none !important;
+}
+
+
+.body.light-mode .btn {
+  color: #fff;
+  background-color: #1a0a00;
+}
+
+.align-items-center {
+  min-height: 43vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+body {
+
+  font-family: "Saira Condensed", sans-serif !important;
+  background-size: cover;
+  background-color: #f8f9fa !important;
+  /* background-position: bottom !important; */
+  overflow-x: hidden;
+  height: 95vh;
+
+
+}
+
+.body {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Video background for light mode */
+.body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  /* Ensures the video is behind all content */
+  background: none;
+}
+
+.body video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  /* Ensures the video covers the entire body */
+}
+
+/* Dark Mode */
+.body.dark-mode {
+  font-family: "Saira Condensed", sans-serif;
+  background-color: #020202;
+  color: #ffffff !important;
+  /* position: relative; */
+  height: 100vh;
+}
+
+/* Video background for dark mode */
+.body.dark-mode video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Ensure the video doesn't interfere with the content */
+.body.dark-mode::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: none;
+}
+
+
+/* Style for light mode video */
+#light-mode-video,
+#dark-mode-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#dark-mode-video {
+  display: none;
+}
+
+button:focus,
+button:active,
+button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+  background: transparent;
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+footer {
+  padding: 10px 0;
+  color: #ffffff;
+  /* background-color: #1a0a00; */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-light {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 1px 1px 6px 1px rgb(177, 174, 174);
+}
+
+.dark-mode footer {
+  background-color: #1a0a00;
+  color: #ffffff;
+}
+
+.light-mode footer {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.text h1.display-4 {
+  font-size: 3.8rem;
+  /* margin-bottom: 9rem;  */
+  font-weight: 900;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text h1.display-4 span {
+  color: #5d503f;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text p.lead {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 200;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+.occuppation h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  animation: fadeIn 2s ease-in-out;
+  /* margin-bottom: 1.5rem;  */
+}
+
+.occuppation h5 {
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  color: #5d503f;
+}
+
+#greeting {
+  font-size: 1.8rem;
+
+}
+
+
+#greeting {
+
+  color: #5d503f;
+  /* display: flex; */
+  /* align-items: center; */
+}
+
+
+
+
+
+
+.projects-two {
+  padding: 0 25px;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a0a00;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  border: 6px solid white;
+}
+
+.image-box:hover .overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .text {
+    text-align: center;
+  }
+}
+
+
+.description {
+  margin-bottom: 15px;
+}
+
+
+@media (max-width: 767px) {
+  .image-box {
+    margin-bottom: 15px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+
+.btn {
+  /* background-color: #6f4c3e !important; Brown background */
+  color: white;
+  /* White text color */
+  padding: 10px 20px;
+  /* Padding around the text */
+  border: none;
+  /* No border */
+  border-radius: 2px !important;
+  /* Rounded corners */
+  font-size: 1rem !important;
+  /* Font size */
+  text-transform: capitalize;
+  /* Uppercase text */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+.btn:hover {
+  /* background-color: #8b5b3e; Lighter brown on hover */
+  transform: translateY(-2px);
+  /* Slight lift effect on hover */
+}
+
+.btn:focus {
+  outline: none !important;
+  /* Remove outline on focus */
+}
+
+
+.language {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+  font-size: 0.9rem;
+  /* Smaller font size for the language text */
+  color: #ffffff;
+  /* Same brown color as the project titles */
+  font-weight: bold;
+  /* Bold text */
+}

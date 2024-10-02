@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Wanjiku Faith</title>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <link rel="icon" href="./pic/logo.PNG" type="image/jpeg">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!-- Bootstrap Icons -->
+    </head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Set minimum height to 100vh */
+            margin: 0;
+            /* Remove default margin */
+            background-color: #f8f9fa;
+            /* Light background for contrast */
+
+        }
+
+        .about-me-section {
+            background-color: #f7f1e1;
+            /* Soft background color */
+            border-radius: 2px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Ample padding for comfort */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            /* Enhanced shadow for depth */
+            text-align: left;
+            /* Center align text */
+            transition: transform 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .about-me-section:hover {
+            transform: translateY(-5px);
+            /* Lift effect on hover */
+        }
+
+        .about-me-section h2 {
+            color: #6f4c3e;
+            /* Dark brown color for heading */
+            font-size: 2.5rem;
+            /* Larger font size for prominence */
+            margin-bottom: 20px;
+            /* Space below the heading */
+            position: relative;
+            /* Position for pseudo-element */
+        }
+
+        .about-me-section h2::after {
+            content: "";
+            /* Pseudo-element for the underline effect */
+            display: block;
+            width: 50px;
+            /* Width of the underline */
+            height: 4px;
+            /* Height of the underline */
+            background-color: #6f4c3e;
+
+            border-radius: 0px;
+            /* Rounded edges for the underline */
+        }
+
+        .about-me-section p {
+            font-size: 1.1rem;
+            /* Slightly larger font size for readability */
+            line-height: 1.6;
+            /* Increased line height for better readability */
+            color: #333;
+            /* Dark gray text color for better contrast */
+        }
+
+        h2 {
+            color: #6f4c3e;
+            /* Dark brown for headers */
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+
+
+        .card {
+            border: none;
+            /* Remove border for a cleaner look */
+            transition: transform 0.2s;
+            /* Add a hover effect */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            /* Scale up on hover */
+        }
+
+        .card-title {
+            font-weight: bold;
+            /* Make titles bold */
+            margin-top: 15px;
+            /* Add some spacing above titles */
+        }
+
+        .card-text {
+            color: #6c757d;
+            /* Set a lighter color for text */
+            flex-grow: 1;
+            /* Allow the text to grow and take up available space */
+        }
+
+
+
+
+        @media (max-width: 576px) {
+            .footer {
+                text-align: center !important;
+                /* Center footer on mobile */
+            }
+        }
+
+        /* Custom styles for centering content on mobile */
+        @media (max-width: 768px) {
+            .navbar-nav {
+                text-align: center;
+                /* Center navbar items on mobile */
+                margin: 0;
+                /* Reset margin for centering */
+            }
+
+
+
+            footer {
+                text-align: center !important;
+                /* Center footer text */
+            }
+
+            .about-me-section {
+                background-color: #f7f1e1;
+                /* Soft background color */
+                border-radius: 2px;
+                /* Rounded corners */
+                padding: 20px;
+                /* Ample padding for comfort */
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                /* Enhanced shadow for depth */
+                text-align: center;
+            }
+
+            .about-me-section h2::after {
+                content: "";
+                /* Pseudo-element for the underline effect */
+                display: block;
+                width: 50px;
+                /* Width of the underline */
+                height: 4px;
+                /* Height of the underline */
+                background-color: #6f4c3e;
+                /* Color of the underline */
+                margin: 10px auto;
+                /* Center the underline */
+                border-radius: 2px;
+                /* Rounded edges for the underline */
+            }
+
+            .interest-section,
+            .philosophy-section {
+                background-color: #f7f1e1;
+                border-radius: 8px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .ct {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .tc {
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .tc .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center !important;
+                text-align: center !important;
+            }
+        }
+
+
+        /* Add custom styles for the sidebar */
+        .sidebar {
+            position: fixed;
+            top: 20;
+            left: -250px;
+            /* Hidden off-screen */
+            width: 250px;
+            height: 100%;
+            background-color: #5d503f;
+            /* Dark background */
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+        }
+
+        /* Main content styles */
+        .content {
+            padding: 0;
+            /* No padding when sidebar is hidden */
+            transition: padding 0.3s ease;
+        }
+
+        .content.shift {
+            padding-left: 250px;
+            /* Shift content when sidebar is visible */
+        }
+
+        .bg-dark {
+            background: black !important;
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                display: none;
+                /* Hide sidebar on larger screens */
+            }
+
+            .content {
+                padding: 0;
+                /* Ensure no padding on larger screens */
+            }
+        }
+
+
+        .card {
+            border: none;
+            /* Remove border for a cleaner look */
+            transition: transform 0.2s;
+            /* Add a hover effect */
+            text-align: left !important;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            /* Scale up on hover */
+        }
+
+        .card-title {
+            font-weight: bold;
+            /* Make titles bold */
+            margin-top: 15px;
+            /* Add some spacing above titles */
+        }
+
+
+        /* Additional styles for list items */
+        ul.list-unstyled li {
+            margin-bottom: 30px;
+            /* Space between list items */
+        }
+
+        .interest-section,
+        .philosophy-section {
+            background-color: #f7f1e1;
+            /* Light brown background */
+            border-radius: 8px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding inside the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+            transition: transform 0.3s ease;
+            /* Smooth transition for hover effect */
+        }
+
+        .interest-section:hover,
+        .philosophy-section:hover {
+            transform: translateY(-5px);
+            /* Lift effect on hover */
+        }
+
+        /* Optional styles for headings */
+        .interest-section h3,
+        .philosophy-section h3 {
+            border-bottom: 2px solid #6f4c3e;
+            /* Underline effect for the headings */
+            padding-bottom: 10px;
+            /* Space below the headings */
+        }
+
+        .logo-img {
+            max-height: 30px;
+            /* Adjust the height as needed */
+            width: auto;
+            /* Keep the aspect ratio */
+        }
+    </style>
+</head>
+
+<body class="theme-default" style="padding: 0; box-sizing: border-box; margin: 0; min-height: 100vh;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./pic/logo.PNG" alt="Wanjiku Faith Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                onclick="toggleSidebar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Projects</a></li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <section class="container my-5">
+            <section class="about-me-section my-5 p-4">
+                <h2>About Me</h2>
+                <p>
+                    👋 Hi there! I’m a passionate Web Developer, Designer, and Photographer based in Nairobi, KE. I love turning ideas into reality through code and creative design. My journey in tech started when I discovered how the web can connect people and share stories, which inspired me to pursue a career in this dynamic field. Whether it’s building sleek websites, crafting user-friendly interfaces, or capturing the perfect moment through my camera, I thrive on creativity and innovation.
+                    
+                <br> <br>    I’m also dedicated to continuous learning and exploring new tech trends. You’ll often find me at local tech meetups, sharing insights and connecting with like-minded individuals. Plus, I’m always up for a fun coding challenge—it keeps things exciting!</p>
+            </section>
+
+            <div class="row tc">
+                <h3 style="margin-top: 0px; margin-bottom: 30px;">Skills</h3>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-body">
+                            <i class="bi bi-braces" style="font-size: 50px; color: #007bff;"></i>
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">HTML, CSS, JavaScript, React, Node.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-body">
+                            <i class="bi bi-palette" style="font-size: 50px; color: #28a745;"></i>
+                            <h5 class="card-title">UI/UX Design</h5>
+                            <p class="card-text">Creating user-friendly and aesthetic designs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-body">
+                            <i class="bi bi-camera" style="font-size: 50px; color: #ffc107;"></i>
+                            <h5 class="card-title">Photography/ Video Editing</h5>
+                            <p class="card-text">Capturing moments with a creative eye.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card text-center shadow-sm d-flex flex-column h-100">
+                        <div class="card-body">
+                            <i class="bi bi-file-earmark-code" style="font-size: 50px; color: #17a2b8;"></i>
+                            <h5 class="card-title">WordPress & Wix</h5>
+                            <p class="card-text">Building and customizing websites with CMS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <section class="projects-section my-5 p-2">
+                <div class="row">
+                    <div class="col-md-6 ct">
+                        <h3 style="margin-bottom: 20px; color: #6f4c3e;">Projects</h3>
+                        <p>I have worked on a variety of projects that showcase my skills and creativity. Some of my
+                            notable projects include:</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <i class="bi bi-person-workspace" style="color: #6f4c3e; margin-right: 10px;"></i>
+                                <strong>Personal Portfolio Website</strong>: A responsive website showcasing my work,
+                                including web development and photography projects. Built using HTML, CSS, and
+                                JavaScript.
+                            </li>
+                            <li>
+                                <i class="bi bi-shop" style="color: #6f4c3e; margin-right: 10px;"></i>
+                                <strong>E-commerce Platform</strong>: Developed a user-friendly e-commerce website using
+                                React and Node.js, implementing payment gateways and user authentication.
+                            </li>
+                            <li>
+                                <i class="bi bi-journal-text" style="color: #6f4c3e; margin-right: 10px;"></i>
+                                <strong>Blogging Platform</strong>: Created a blogging website where users can register,
+                                create, and share their blog posts, focusing on clean UI and user experience.
+                            </li>
+                            <li>
+                                <i class="bi bi-image" style="color: #6f4c3e; margin-right: 10px;"></i>
+                                <strong>Photography Gallery</strong>: Designed a visually appealing online gallery to
+                                showcase my photography work, integrated with a lightbox feature for enhanced viewing.
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <div class="interest-section mb-4">
+                            <h3 style="margin-bottom: 20px; color: #6f4c3e;">Interests</h3>
+                            <p>When I step away from coding, I’m usually off on an adventure 🌳—whether it’s hiking through nature, capturing stunning landscapes with my camera 📷, or diving into the latest tech discoveries 🔍. Sustainability 🌱 fuels my passion, and I love working on eco-friendly projects that make a difference. You’ll also catch me at tech meetups and workshops 💻, connecting with inspiring people, exchanging ideas, and always learning something new.</p>
+                        </div>
+
+                        <div class="philosophy-section">
+                            <h3 style="margin-top: 30px; color: #6f4c3e;">My Philosophy</h3>
+                            <p>I believe in the power of technology to create meaningful change. My goal is to use my skills to build apps that solve problems and improve user experience. I’m always learning and staying up-to-date with the latest web development trends.
+
+                                Fun fact: I love finding creative ways to debug code—it’s like solving a puzzle! 🧩</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <footer class="bg-dark text-white my-5">
+                <div class="container">
+                    <p>© 2024 Made with love by Daisy. Thank you for visiting! Goodbye!</p>
+                </div>
+            </footer>
+
+            <script>
+                function toggleSidebar() {
+                    const sidebar = document.getElementById('sidebar');
+                    const content = document.getElementById('content');
+                    sidebar.classList.toggle('active');
+                    content.classList.toggle('shift');
+                }
+            </script>
+</body>
+
+</html>
